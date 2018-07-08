@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Doe Sorrisos</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="usuario navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html">Doe Sorrisos</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left" id="atores">
+                    <li class="ator">
+                        <a class="page-scroll" href="instituicao.html">Instituição</a>
+                    </li>
+                    <li class="ator">
+                        <a class="page-scroll" href="doacoes.html">Doações</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <!-- <li>
+                        <a class="page-scroll" href="#about">Quem somos</a>
+                    </li> -->
+                    <li>
+                        <a class="page-scroll" href="cadastro.html">Cadastra-se</a>
+                    </li>
+                    <button id="btnEntrar" type="button" class="btn btn-primary">
+                        <a href="login.html">Entrar</a>
+                    </button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="cadInstituicao">
+            <form method="POST" action="http://localhost:3000/instituicao" id="frm-cadastro">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>Dados Instituição</h5>
+                        <hr>
+                    </div>
+                    <div class="col-md-12 input">
+                        <label for="">Nome:</label>
+                        <input type="text" class="form-control" name="DADOS_INSTITUICAO.NM_INSTITUICAO" placeholder="Nome" autofocus maxlength="40"
+                            required>
+                    </div>
+                    <div class="col-md-6 input">
+                        <label for="">CNPJ:</label>
+                        <input type="text" id="doc" class="form-control" name="DADOS_INSTITUICAO.CNPJ" placeholder="CNPJ" maxlength="20" required>
+                    </div>
+                    <div class="col-md-6 input2">
+                        <label for="">Quantidade de crianças:</label>
+                        <select name="DADOS_INSTITUICAO.QT_CRIANCAS" class="form-control" required>
+                            <option value="0" disabled selected>Quantidade de crianças</option>
+                            <option value="1">Entre 10 e 20</option>
+                            <option value="2">Entre 20 e 30</option>
+                            <option value="3">Entre 30 e 40</option>
+                            <option value="4">Mais de 40</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-12">
+                        <h5>Contatos Instituição</h5>
+                        <hr>
+                    </div>
+                    <div class="col-md-6 input">
+                        <label for="">Telefone:</label>
+                        <input type="text" class="phone_with_ddd form-control" name="CONTATOS_INSTITUICAO.TELEFONE" placeholder="(99) 0000-0000"
+                            required>
+                    </div>
+                    <div class="col-md-6 input2">
+                        <label for="">Celular:</label>
+                        <input type="text" class="sp_celphones form-control cel-sp-mask" name="CONTATOS_INSTITUICAO.CELULAR" placeholder="(99) 90000-0000">
+                    </div>
+                    <div class="col-md-6 input">
+                        <label for="">Site:</label>
+                        <input type="url" class="form-control" name="CONTATOS_INSTITUICAO.SITE" placeholder="www.example.com.br" autofocus maxlength="40">
+                    </div>
+
+                    <div class="col-md-12">
+                        <h5>Dados Responsável</h5>
+                        <hr>
+                    </div>
+                    <div class="col-md-6 input">
+                        <label for="">Nome:</label>
+                        <input type="text" class="form-control" name="RESPONSAVEL_INSTITUICAO.NM_RESPONSAVEL" placeholder="Nome" autofocus maxlength="40"
+                            required>
+                    </div>
+                    <div class="col-md-6 input2">
+                        <label for="">Cargo:</label>
+                        <input type="text" class="form-control" name="RESPONSAVEL_INSTITUICAO.CARGO" placeholder="Cargo" maxlength="20">
+                    </div>
+
+                    <div class="col-md-12">
+                        <h5>Endereço</h5>
+                        <hr>
+                    </div>
+                    <!-- <form method="get" action="."> -->
+                    <div class="col-md-2 input">
+                        <label>CEP:</label>
+                        <input name="ENDERECO_INSTITUICAO.CEP" class="form-control" type="text" id="cep" value="" maxlength="9" onblur="pesquisacep(this.value);"
+                            required />
+                    </div>
+                    <div class="col-md-5 input2">
+                        <label>Rua:</label>
+                        <input name="ENDERECO_INSTITUICAO.RUA" class="form-control" type="text" id="rua" />
+                    </div>
+                    <div class="col-md-5 input2">
+                        <label>Complemento:</label>
+                        <input name="ENDERECO_INSTITUICAO.COMPLEMENTO_END" class="form-control" type="text" id="complemento" maxlength="20" />
+                    </div>
+                    <div class="col-md-2 input2">
+                        <label>Número:</label>
+                        <input name="ENDERECO_INSTITUICAO.N_ENDERECO" class="form-control" type="number" id="numero" maxlength="4" required />
+                    </div>
+                    <div class="col-md-4 input">
+                        <label>Bairro:</label>
+                        <input nname="ENDERECO_INSTITUICAO.BAIRRO" class="form-control" type="text" id="bairro" />
+                    </div>
+                    <div class="col-md-4 input">
+                        <label>Cidade:</label>
+                        <input name="ENDERECO_INSTITUICAO.CIDADE" class="form-control" type="text" id="cidade" />
+                    </div>
+                    <div class="col-md-2 input">
+                        <label>Estado:</label>
+                        <input name="ENDERECO_INSTITUICAO.ESTADO" class="form-control" type="text" id="uf" />
+                    </div>
+                    <div class="ibge">
+                        <label>IBGE:</label>
+                        <input name="ibge" type="text" id="ibge" size="8" />
+                    </div>
+                    <!-- </form> -->
+
+                    <div class="col-md-12">
+                        <h5>Redes Sociais</h5>
+                        <hr>
+                    </div>
+                    <div class=" col-md-6 input">
+                        <label for=" ">Facebook:</label>
+                        <input type="text" class="form-control" name="REDES_SOCIAL_INSTITUICAO.FACEBOOK" placeholder="Facebook" maxlength="20 ">
+                    </div>
+                    <div class=" col-md-6 input">
+                        <label for=" ">Instagram:</label>
+                        <input type="text" class="form-control" name="REDES_SOCIAL_INSTITUICAO.INSTAGRAM" placeholder="@exemplo" maxlength="20 ">
+                    </div>
+
+                    <div class="col-md-12">
+                        <h5>Credenciais</h5>
+                        <hr>
+                    </div>
+                    <div class=" col-md-6 input">
+                        <label for=" ">E-mail:</label>
+                        <input type="email" class="form-control" name="CREDENCIAIS_INSTITUICAO.EMAIL" placeholder="exemplo@email.com" maxlength="20"
+                            required>
+                    </div>
+                    <div class="col-md-6 input2">
+                        <label for="">Senha:</label>
+                        <input type="password" class="form-control" name="CREDENCIAIS_INSTITUICAO.SENHA" placeholder="Digite sua senha" maxlength="32"
+                            required>
+                    </div>
+
+                </div>
+                <br>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="copyright">Copyright &copy; Doe Sorrisos - 2017</span>
+                </div>
+                <!-- <div class="col-md-6 col-left" id="social">
+                    <ul class="list-inline social-buttons">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div> -->
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+
+    <!-- Validação CEP -->
+    <script src="js/mascaraCep.js"></script>
+
+    <!-- Validação Telefone -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/411618/jquery.mask.js'></script>
+
+    <script src="js/mascaraTelefone.js"></script>
+
+    <!-- CNPJ -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.1.0/vanilla-masker.min.js'></script>
+    <script src="js/mascaraCnpj.js"></script>
+
+    <script>
+            var form = document.getElementById("frm-cadastro");
+            console.log(form);
+            form.addEventListener("submit", function (event) {
+                var posted = $.post("http://localhost:3000/instituicao", $("#frm-cadastro").serialize());
+                posted.done(function (data) {
+                    alert("Cadastrado com sucesso!");
+                });
+                event.preventDefault(closed);
+                return false;
+            });
+        </script>
+
+</body>
+
+</html>

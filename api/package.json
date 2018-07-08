@@ -1,0 +1,27 @@
+{
+  "name": "doe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/doabrinqs_ficr/doabrinqs.git"
+  },
+  "author": "Renato Junior and Everton Alves",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/doabrinqs_ficr/doabrinqs#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.0",
+    "vanilla-masker": "^1.2.0",
+    "ajncookie": ">=0.0.3"
+  }
+}
